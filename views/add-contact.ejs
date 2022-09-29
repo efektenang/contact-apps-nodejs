@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col">
+            <% if (typeof errors != 'undefined') { %>
+                <div class="alert alert-danger" role="alert">
+                    <ul> 
+                        <% errors.forEach(error => { %>
+                         <li><%- error.msg %> </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            <% } %>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary"><%- title %> </h6>
+            </div>
+            <div class="card-body">
+                <form action="/" method="post">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama" name="nama" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
+                    </div>
+                    <button class="btn btn-success" type="submit"> Tambahkan </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
